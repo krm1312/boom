@@ -1,3 +1,6 @@
+
+var NUM_STATUES = 11;
+
 var Weapon = function (name, initial_cost, extra_cost) {
   this.name = name;
   this.count = 0;
@@ -22,7 +25,7 @@ function body_load()
    	document.forms['gbe'].elements['gb_lvl'].value = gb_lvl;
    }
 
-   for( j = 1; j <= 10; j++ )
+   for( j = 1; j <= NUM_STATUES; j++ )
    {      
      var boosted = localStorage.getItem( 'bb_gbe_statue_boosted' + j );
      if( boosted === "true"  )
@@ -97,7 +100,7 @@ function gbe_calc()
 function statue_calc()
 {
    var total = 0;
-   for( j = 1; j <= 10; j++ )
+   for( j = 1; j <= NUM_STATUES; j++ )
    {
    	var boosted = document.forms['gbe'].elements['boosted' + j].checked;
    	if( boosted ) 

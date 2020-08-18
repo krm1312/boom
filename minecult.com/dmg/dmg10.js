@@ -1,3 +1,6 @@
+
+var NUM_STATUES = 11;
+
 var LC = function (index, capacity, image) {
   this.index = index;
   this.capacity = capacity;
@@ -33,7 +36,7 @@ function body_load()
    var ft_ht = document.getElementById( "myFooter" ).clientHeight;
    document.getElementById( "content" ).style.marginBottom = (parseInt(ft_ht)+12) + "px";
 
-   for( j = 1; j <= 10; j++ )
+   for( j = 1; j <= NUM_STATUES; j++ )
    {      
      var boosted = localStorage.getItem( 'bb_dmg_statue_boosted' + j );
      if( boosted === "true"  )
@@ -289,7 +292,7 @@ function dps_calc()
 function statue_calc()
 {
    var total = 0;
-   for( j = 1; j <= 10; j++ )
+   for( j = 1; j <= NUM_STATUES; j++ )
    {
    	var boosted = document.forms['dmg'].elements['boosted' + j].checked;
    	if( boosted ) 
