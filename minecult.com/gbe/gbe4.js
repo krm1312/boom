@@ -1,5 +1,5 @@
 
-var NUM_STATUES = 11;
+var NUM_STATUES = 12;
 
 var Weapon = function (name, initial_cost, extra_cost) {
   this.name = name;

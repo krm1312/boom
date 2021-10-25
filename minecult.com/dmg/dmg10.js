@@ -1,5 +1,5 @@
 
-var NUM_STATUES = 11;
+var NUM_STATUES = 12;
 
 var LC = function (index, capacity, image) {
   this.index = index;
